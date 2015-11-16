@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ComposeTweetViewController">
+            <connections>
+                <outlet property="textView" destination="EzG-Gd-fG4" id="njP-kQ-5B8"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xay-8H-vMK">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="66" id="ms8-Ii-2G2"/>
+                    </constraints>
+                    <items>
+                        <navigationItem id="EMr-8E-VZv">
+                            <barButtonItem key="leftBarButtonItem" id="CwO-mN-OAe">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tCQ-P0-YbP">
+                                    <rect key="frame" x="16" y="29" width="71" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <animations/>
+                                    <state key="normal" title="Cancel"/>
+                                    <connections>
+                                        <action selector="onCancel:" destination="-1" eventType="touchUpInside" id="hxW-pK-gDe"/>
+                                    </connections>
+                                </button>
+                                <connections>
+                                    <action selector="onCancel:" destination="-1" id="9SY-aL-1jc"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" id="Khf-hw-FTw">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pzd-u0-8dv">
+                                    <rect key="frame" x="233" y="29" width="71" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <animations/>
+                                    <state key="normal" title="Tweet"/>
+                                    <connections>
+                                        <action selector="onTweet:" destination="-1" eventType="touchUpInside" id="5uY-kc-Ptq"/>
+                                    </connections>
+                                </button>
+                                <connections>
+                                    <action selector="onTweet:" destination="-1" id="h1f-r6-eyi"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EzG-Gd-fG4">
+                    <rect key="frame" x="0.0" y="67" width="320" height="115"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="115" id="0YT-P9-KkU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="xay-8H-vMK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3G8-cA-qEs"/>
+                <constraint firstItem="xay-8H-vMK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9Jt-P1-u9r"/>
+                <constraint firstItem="EzG-Gd-fG4" firstAttribute="top" secondItem="xay-8H-vMK" secondAttribute="bottom" constant="1" id="DeC-Zd-PcP"/>
+                <constraint firstAttribute="trailingMargin" secondItem="EzG-Gd-fG4" secondAttribute="trailing" constant="-8" id="Ita-QB-1Ta"/>
+                <constraint firstItem="EzG-Gd-fG4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" constant="-8" id="TOg-RO-Qts"/>
+                <constraint firstAttribute="trailing" secondItem="xay-8H-vMK" secondAttribute="trailing" id="rif-sl-mFV"/>
+            </constraints>
+            <point key="canvasLocation" x="120" y="304"/>
+        </view>
+    </objects>
+</document>
