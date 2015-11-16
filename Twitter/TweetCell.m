@@ -11,8 +11,11 @@
 @implementation TweetCell
 
 - (void)awakeFromNib {
-    // Initialization code
 }
+
+//- (IBAction)onImageTap:(id)sender {
+//    NSLog(@"TAPPED");
+//}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

@@ -14,6 +14,7 @@
 #import <UIImageView+AFNetworking.h>
 #import "ComposeTweetViewController.h"
 #import "TweetDetailsViewController.h"
+#import "ProfileViewController.h"
 
 @interface TweetsViewController () <UITableViewDataSource, UITableViewDelegate>
 

@@ -12,12 +12,14 @@
 #import "User.h"
 #import "UIImageView+AFNetworking.h"
 #import "ReplyTweetViewController.h"
+#import "ProfileViewController.h"
 
 @interface TweetDetailsViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *tweetLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timestampLabel;
+- (void)onCustomTap:(UITapGestureRecognizer *)tapGestureRecognizer;
 
 @end
 
@@ -35,6 +37,19 @@
     self.timestampLabel.text = stringFromDate;
     
     [self.imageView setImageWithURL:[NSURL URLWithString:self.tweet.user.profileImageUrl]];
+    
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onCustomTap:)];
+    tapGestureRecognizer.numberOfTapsRequired = 1;
+    self.imageView.userInteractionEnabled = YES;
+    [self.imageView addGestureRecognizer:tapGestureRecognizer];
+}
+
+- (void)onCustomTap:(UITapGestureRecognizer *)tapGestureRecognizer {
+    NSLog(@"TAPPED");
+    User *tweetUser = self.tweet.user;
+    ProfileViewController *profileViewController = [[ProfileViewController alloc] init];
+    profileViewController.user = tweetUser;
+    [self.navigationController pushViewController:profileViewController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

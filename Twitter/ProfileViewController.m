@@ -7,7 +7,6 @@
 //
 
 #import "ProfileViewController.h"
-#import "User.h"
 #import <UIImageView+AFNetworking.h>
 
 @interface ProfileViewController ()
@@ -17,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *screenameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *profileImage;
-@property (nonatomic, strong) User *user;
+@property BOOL customUser;
 
 @end
 
@@ -26,7 +25,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Profile";
-    self.user = [User currentUser];
+    
+    if (self.user == nil) {
+        self.user = [User currentUser];
+    }
+    
     self.tweetCount.text = [NSString stringWithFormat:@"%@", self.user.tweetCount];
     self.followingCount.text = [NSString stringWithFormat:@"%@", self.user.followingCount];
     self.followerCount.text = [NSString stringWithFormat:@"%@", self.user.followerCount];

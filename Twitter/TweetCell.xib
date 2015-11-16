@@ -31,6 +31,7 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uhy-QA-anI">
                         <rect key="frame" x="8" y="8" width="50" height="48"/>
                         <animations/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="Jrz-IY-FdI"/>
                             <constraint firstAttribute="height" constant="48" id="cxG-Bl-Bnb"/>
