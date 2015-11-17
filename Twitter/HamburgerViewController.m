@@ -54,11 +54,12 @@
         [_contentViewController didMoveToParentViewController:nil];
     }
     
+    _contentViewController = contentViewController;
+    
     [contentViewController willMoveToParentViewController:self];
     [self.contentView addSubview:contentViewController.view];
     [contentViewController didMoveToParentViewController:self];
     
-    _contentViewController = contentViewController;
     
     [UIView animateWithDuration:0.3 animations:^{
         [self closeMenu];

@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.cellLabels = [NSArray arrayWithObjects:@"Tweets", @"Mentions", @"Profile", nil];
+    self.cellLabels = @[@"Tweets", @"Mentions", @"Profile"];
     self.viewControllers = [NSMutableArray array];
     
     TweetsViewController *tweetsViewController = [[TweetsViewController alloc] init];
@@ -39,7 +39,7 @@
     UINavigationController *profileNavigationController = [[UINavigationController alloc] initWithRootViewController:profileViewController];
     [self.viewControllers addObject:profileNavigationController];
     
-//    self.hamburgerViewController.contentViewController = navigationController;
+//    self.hamburgerViewController.contentViewController = tweetsNavigationController;
 //    self.hamburgerViewController.contentViewController = tweetsViewController;
     
     self.tableView.delegate = self;
